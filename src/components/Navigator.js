@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Main from './Main';
 import AddDeck from './AddDeck';
 import DeckDetails from './DeckDetails';
+import AddCard from './AddCard';
 
 const Tab = createBottomTabNavigator();
 
@@ -43,6 +44,11 @@ export default Navigator = () => (
       name="DeckDetails"
       component={DeckDetails}
       options={({ route }) => ({ title: `${route.params.deck.title} Deck` })}
+    />
+    <Stack.Screen
+      name="AddCard"
+      component={AddCard}
+      options={{ title: 'New Card' }}
     />
   </Stack.Navigator>
 );

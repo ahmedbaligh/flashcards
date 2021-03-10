@@ -26,7 +26,11 @@ const DeckDetails = ({ route, navigation }) => {
 
         <View style={styles.controls}>
           <View style={styles.button}>
-            <Button title="Add Card" color="dodgerblue" />
+            <Button
+              title="Add Card"
+              color="dodgerblue"
+              onPress={() => navigation.navigate('AddCard', { id })}
+            />
           </View>
 
           <View style={styles.button}>
