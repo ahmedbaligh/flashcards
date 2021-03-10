@@ -1,11 +1,11 @@
 import React from 'react';
 import { Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-const Deck = ({ deck }) => {
+const Deck = ({ deck, navigation }) => {
   return (
     <TouchableOpacity
       style={styles.deck}
-      onPress={() => console.log(`"${deck.title}" deck was clicked.`)}
+      onPress={() => navigation.navigate('DeckDetails', { deck })}
     >
       <Text style={styles.title}>{deck.title}</Text>
       <Text style={styles.cards}>{`${deck.cards.length} cards`}</Text>
