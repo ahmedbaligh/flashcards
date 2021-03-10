@@ -4,7 +4,7 @@ import { View } from 'react-native';
 import { retrieveDecks } from '../utils/api';
 import DeckList from './DeckList';
 
-const Main = () => {
+const Main = ({ navigation }) => {
   const [decks, setDecks] = useState({});
 
   useEffect(() => {
@@ -13,7 +13,7 @@ const Main = () => {
 
   return (
     <View>
-      <DeckList decks={decks} />
+      <DeckList decks={decks} navigation={navigation} />
     </View>
   );
 };

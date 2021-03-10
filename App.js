@@ -1,16 +1,10 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import { Platform, StatusBar, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import Navigtor from './src/components/Navigator';
 
-import Main from './src/components/Main';
-
-export default function App() {
-  return (
-    <View
-      style={{
-        paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0
-      }}
-    >
-      <Main />
-    </View>
-  );
-}
+export default () => (
+  <NavigationContainer>
+    <Navigtor />
+  </NavigationContainer>
+);
