@@ -18,3 +18,16 @@ export const retrieveDecks = async () => {
     return initialDecks;
   }
 };
+
+export const deleteDeck = async id => {
+  const data = await AsyncStorage.getItem(KEY);
+
+  if (data) {
+    const decks = JSON.parse(data);
+
+    delete decks[id];
+    await AsyncStorage.setItem(KEY, JSON.stringify(decks));
+  }
+
+  return;
+};
