@@ -5,9 +5,7 @@ const Deck = ({ id, deck, navigation }) => {
   return (
     <TouchableOpacity
       style={styles.deck}
-      onPress={() =>
-        navigation.navigate('DeckDetails', { id, deck, navigation })
-      }
+      onPress={() => navigation.navigate('DeckDetails', { id, deck })}
     >
       <Text style={styles.title}>{deck.title}</Text>
       <Text style={styles.cards}>{`${deck.cards.length} cards`}</Text>

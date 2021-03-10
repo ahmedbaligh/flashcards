@@ -34,14 +34,13 @@ const DeckDetails = ({ route, navigation }) => {
           </View>
 
           <View style={styles.button}>
-            <Button title="Start Quiz" />
+            <Button title="Start Quiz" disabled={!cards.length} />
           </View>
 
           <View style={styles.delete}>
             <Button
               title="Delete Deck"
               color="red"
-              disabled={!cards.length}
               onPress={() =>
                 Alert.alert(
                   'Delete Confirmation',
