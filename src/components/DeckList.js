@@ -6,7 +6,12 @@ const DeckList = ({ decks, navigation }) => {
   return (
     <ScrollView style={styles.container}>
       {Object.keys(decks).map(deckID => (
-        <Deck key={deckID} deck={decks[deckID]} navigation={navigation} />
+        <Deck
+          key={deckID}
+          id={deckID}
+          deck={decks[deckID]}
+          navigation={navigation}
+        />
       ))}
     </ScrollView>
   );

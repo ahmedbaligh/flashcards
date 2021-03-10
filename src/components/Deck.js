@@ -1,11 +1,13 @@
 import React from 'react';
 import { Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-const Deck = ({ deck, navigation }) => {
+const Deck = ({ id, deck, navigation }) => {
   return (
     <TouchableOpacity
       style={styles.deck}
-      onPress={() => navigation.navigate('DeckDetails', { deck })}
+      onPress={() =>
+        navigation.navigate('DeckDetails', { id, deck, navigation })
+      }
     >
       <Text style={styles.title}>{deck.title}</Text>
       <Text style={styles.cards}>{`${deck.cards.length} cards`}</Text>
