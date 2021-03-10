@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View } from 'react-native';
 
-import { initialDecks } from '../utils/data';
+import { retrieveDecks } from '../utils/api';
 import DeckList from './DeckList';
 
 const Main = () => {
-  const decks = initialDecks;
+  const [decks, setDecks] = useState({});
+
+  useEffect(() => {
+    retrieveDecks().then(decks => setDecks(decks));
+  }, []);
 
   return (
     <View>
