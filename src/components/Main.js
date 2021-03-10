@@ -9,7 +9,7 @@ const Main = ({ navigation }) => {
 
   useEffect(() => {
     retrieveDecks().then(decks => setDecks(decks));
-  }, []);
+  });
 
   return (
     <View>
