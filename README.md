@@ -1,44 +1,43 @@
-# My Universal React Project
+# Mobile Flashcards
 
-<p>
-  <!-- iOS -->
-  <a href="https://itunes.apple.com/app/apple-store/id982107779">
-    <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff" />
-  </a>
-  <!-- Android -->
-  <a href="https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=blankexample">
-    <img alt="Supports Expo Android" longdesc="Supports Expo Android" src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff" />
-  </a>
-  <!-- Web -->
-  <a href="https://docs.expo.io/workflow/web/">
-    <img alt="Supports Expo Web" longdesc="Supports Expo Web" src="https://img.shields.io/badge/web-4630EB.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" />
-  </a>
-</p>
+Mobile App for both Android and iOS using React Native that allows users to:
 
-## 🚀 How to use
+- take quizzes in multiple categories.
 
-- Install packages with `yarn` or `npm install`.
-  - If you have native iOS code run `npx pod-install`
-- Run `yarn start` to start the bundler.
-- Open the project in a React runtime to try it:
-  - iOS: [Client iOS](https://itunes.apple.com/app/apple-store/id982107779)
-  - Android: [Client Android](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=blankexample)
-  - Web: Any web browser
+- add new quiz questions/answers to each category.
 
-## Adding Native Code
+- add and delete categories.
 
-This project can be run from a web browser or the Expo client app. You may find that you want to add more native code later on. You can do this by ejecting the project and rebuilding it yourself.
+## Getting Started
 
-- Run `yarn eject` to create the native projects.
-- You can still run your project in the web browser or Expo client, you just won't be able to access any new native modules you add.
+### Installation
 
-## Publishing
+Make sure to have `yarn` installed in your machine. Then navigate to the project's root directory and run:
 
-- Deploy the native app to the App store and Play store using this guide: [Deployment](https://docs.expo.io/distribution/app-stores/).
-- Deploy the website using this guide: [Web deployment](https://docs.expo.io/distribution/publishing-websites/).
+```bash
+yarn
+```
 
-## 📝 Notes
+To start the app on your local server, run:
 
-- Learn more about [Universal React](https://docs.expo.io/).
-- See what API and components are [available in the React runtimes](https://docs.expo.io/versions/latest/).
-- Find out more about developing apps and websites: [Guides](https://docs.expo.io/guides/).
+```bash
+yarn start
+```
+
+### Test on your Device
+
+Expo's developer's tools should now be open in browser, use the QR code presented there (or in your terminal) to test the app on your mobile phone by following the below steps:
+
+1. Download [Expo Go](https://expo.io/tools#client) app on device.
+
+2. Scan the code using your Camera App on iOS, or using the app's Scan QR Code option, if you are using Andriod.
+
+## Tests
+
+The App's UI and overall functionality have been tested on:
+
+- Pixel 3x - Andriod R (Simulator)
+
+- iPhone 7 Plus - iOS 14.4.
+
+- Xiaomi Redmi Note 9 Pro - Andriod 10.
