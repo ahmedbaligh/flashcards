@@ -41,7 +41,7 @@ export const createNotification = () =>
       }
     });
 
-export const clearNotification = () =>
+export const removeNotification = () =>
   AsyncStorage.removeItem(KEY).then(
     Notifications.cancelAllScheduledNotificationsAsync
   );

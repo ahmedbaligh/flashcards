@@ -34,7 +34,11 @@ const DeckDetails = ({ route, navigation }) => {
           </View>
 
           <View style={styles.button}>
-            <Button title="Start Quiz" disabled={!cards.length} />
+            <Button
+              title="Start Quiz"
+              disabled={!cards.length}
+              onPress={() => navigation.navigate('Quiz', { cards, id })}
+            />
           </View>
 
           <View style={styles.delete}>

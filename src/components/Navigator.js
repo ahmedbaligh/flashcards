@@ -6,6 +6,7 @@ import Main from './Main';
 import AddDeck from './AddDeck';
 import DeckDetails from './DeckDetails';
 import AddCard from './AddCard';
+import Quiz from './Quiz';
 
 const Tab = createBottomTabNavigator();
 
@@ -50,5 +51,6 @@ export default Navigator = () => (
       component={AddCard}
       options={{ title: 'New Card' }}
     />
+    <Stack.Screen name="Quiz" component={Quiz} />
   </Stack.Navigator>
 );
