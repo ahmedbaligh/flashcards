@@ -47,7 +47,7 @@ export const addCard = async (deckID, card) => {
     });
 
     await AsyncStorage.mergeItem(KEY, updatedDeck);
-    return;
+    return deck;
   }
 };
 

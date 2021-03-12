@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   SafeAreaView,
   Text,
@@ -10,8 +10,15 @@ import {
 import { deleteDeck } from '../utils/api';
 
 const DeckDetails = ({ route, navigation }) => {
-  const { id, deck } = route.params;
+  const { id } = route.params;
+  const [deck, setDeck] = useState(route.params.deck);
   const { title, cards } = deck;
+
+  useEffect(() => {
+    route.params?.deck
+      ? setDeck(route.params?.deck)
+      : navigation.navigate('Home');
+  }, [route.params?.deck]);
 
   const onDeckDelete = () => {
     deleteDeck(id);

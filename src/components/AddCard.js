@@ -22,9 +22,9 @@ const AddCard = ({ route, navigation }) => {
       return Alert.alert('Missing Field', 'Kindly, add an answer first.');
 
     const deckID = route.params.id;
-    addCard(deckID, { question, answer });
+    const deck = await addCard(deckID, { question, answer });
 
-    navigation.navigate('DeckDetails');
+    navigation.navigate('DeckDetails', { deck });
   };
 
   return (
